@@ -13,7 +13,11 @@
     <div class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2 class="modal-heading">Cart</h2>
+            <h2 class="modal-heading cart-head">Cart</h2>
+            <div class="cart">
+            </div>
+            <h3 class="total-area">Total is: $<Span class="total">0</Span></h3>
+            <h2 class="modal-heading customer">Customer information</h2>
             <form class="checkout">
                 <label for="fname">First name:</label><br>
                 <input type="text" id="fname" name="fname"><br><br>
@@ -37,45 +41,45 @@
     <main>
 
         <div class="catalogue">
-            <div class="card">
+            <div class="card" id="smalltalk">
                 <img src="references/smalltalk.jpg" alt="Small talk" />
                 <h6 class="desc">Small talk</h6>
                 <div class="purchase">
-                    <h6 class="price">$100</h6>
-                    <button class="cart" type="button">Add to cart</button>
+                    <h6 class="price-area">$<span class="price">100</span></h6>
+                    <button class="add" type="button">Add to cart</button>
                 </div>            
             </div>
-            <div class="card">
+            <div class="card" id="lightheartedchat">
                 <img src="references/2jokes.jpg" alt="Lighthearted chat" />
                 <h6 class="desc">Lighthearted chat + 2 jokes</h6>
                 <div class="purchase">
-                    <h6 class="price">$250</h6>
-                    <button class="cart" type="button">Add to cart</button>
+                    <h6 class="price-area">$<span class="price">250</span></h6>
+                    <button class="add" type="button">Add to cart</button>
                 </div>            
             </div>
-            <div class="card">
+            <div class="card" id="banter">
                 <img src="references/banter.jpg" alt="Banter" />
                 <h6 class="desc">Discussion/banter (75 words max.)</h6>
                 <div class="purchase">
-                    <h6 class="price">$500</h6>
-                    <button class="cart" type="button">Add to cart</button>
+                    <h6 class="price-area">$<span class="price">500</span></h6>
+                    <button class="add" type="button">Add to cart</button>
                 </div>
                 
             </div>
-            <div class="card">
+            <div class="card" id="handshake">
                 <img src="references/handshake.jpg" alt="Handshake" />
                 <h6 class="desc">Deep convo with handshake</h6>
                 <div class="purchase">
-                    <h6 class="price">$1000</h6>
-                    <button class="cart" type="button">Add to cart</button>
+                    <h6 class="price-area">$<span class="price">1000</span></h6>
+                    <button class="add" type="button">Add to cart</button>
                 </div>            
             </div>
-            <div class="card">
+            <div class="card" id="withdog">
                 <img src="references/withdog.jpg" alt="With dog" />
                 <h6 class="desc">Hangout with me & my dog (must bring chew toy)</h6>
                 <div class="purchase">
-                    <h6 class="price">$1500</h6>
-                    <button class="cart" type="button">Add to cart</button>
+                    <h6 class="price-area">$<span class="price">1500</span></h6>
+                    <button class="add" type="button">Add to cart</button>
                 </div>            
             </div>
         </div>

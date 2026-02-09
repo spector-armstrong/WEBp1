@@ -65,7 +65,7 @@ header button:hover {
     height: 25%;
 }
 
-.price {
+.price-area {
     margin: 0;
     font-size: 1.5rem;
 }
@@ -86,7 +86,7 @@ button {
 
 .modal {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 1; 
   left: 0;
   top: 0;
@@ -104,10 +104,11 @@ button {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  font-size: larger;
 }
 
 .close {
-  color: #aaa;
+  color: #000000;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -118,4 +119,23 @@ button {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.cart-card {
+    height: 20vh;
+    background-color: rgb(70, 42, 42);
+    border: #000000 solid 3px;
+    display: grid;
+    grid-template: 1fr / 1fr 5fr 2fr 2fr;
+    font-size: 2em;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-card > img {
+    height: 20vh;
+}
+
+.cart-card > h6 {
+    margin: 0;
 }
