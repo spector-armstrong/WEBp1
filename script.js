@@ -46,6 +46,7 @@ function handleCardClick(event) {
 function updateCart() {
     cart.innerHTML = '';
     let total = 0; 
+    console.log(selectedItems)
 
     for (const itemId in selectedItems) {
       const item = selectedItems[itemId];
@@ -55,30 +56,18 @@ function updateCart() {
                     <h6 class="cart-desc">${item.name}</h6>
                     <h6 class="cart-price">$${item.price}</h6>
                     <div class="quantity-container">
-                      <button class="subt-btn">-</button>
+                      <button class="subt-btn" data-item-id="${itemId}">-</button>
                       <span class="quantity-text">${item.count}</span>
-                      <button class="add-btn">+</button>
+                      <button class="add-btn" data-item-id="${itemId}">+</button>
                     </div>
                 </div>`
-      
 
-        const quantityText = document.querySelector(".quantity-text"); 
-        const addButton = document.querySelector(".add-btn");
-        const subtractButton = document.querySelector(".subt-btn");
-
-        addButton.addEventListener("click", () => {
-            addItem(itemId);
-        });
-
-        subtractButton.addEventListener("click", () => {
-            removeItem(itemId);
-        });
-
-        total += item.price * item.count; 
+       total += item.price * item.count;
     }
-
-    totalElement.textContent = `${total.toFixed(2)}`; 
+    
+    totalElement.textContent = `${total}`; 
 }
+
 
 function addItem(itemId) {
     if (selectedItems[itemId]) {
@@ -101,4 +90,14 @@ cards.forEach((card) => {
     card.addEventListener("click", handleCardClick);
 });
 
+cart.addEventListener("click", function(event) {
+      const target = event.target;
+      if (target.classList.contains("add-btn")) {
+        const itemId = target.getAttribute("data-item-id");
+        addItem(itemId);
+      } else if (target.classList.contains("subt-btn")) {
+        const itemId = target.getAttribute("data-item-id");
+        removeItem(itemId);
+      }
+    });
 
